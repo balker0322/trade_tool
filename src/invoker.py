@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from binance import Client
 
 
 class Invoker(ABC):
@@ -6,5 +7,4 @@ class Invoker(ABC):
 
 
 class TradeInvoker(Invoker):
-
-    def __init__(self)
+    pass
