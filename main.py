@@ -8,7 +8,7 @@ def main():
     api_secret = config['binance_keys'][mode]['SECRET_KEY']
     client = Client(api_key, api_secret)
 
-    prices = client.get_all_tickers()
+    prices = client.get_symbol_info('BNBBTC')
 
     print(prices)
 
