@@ -1,15 +1,10 @@
 from abc import ABC, abstractmethod
+from binance import Client
 
 
 class IExchange(ABC):
-    
-    @abstractmethod
-    def get_pair_market_price(self, pair:str) -> float:
-        pass
+    pass
 
-    @abstractmethod
-    def open_position(self, pair:str):
-        pass
 
 class BinanceExchange(IExchange):
 
