@@ -60,6 +60,7 @@ class TradeInvoker(Invoker):
     
     def trail_tp(self, pair:str=''):
         open_positions = self.get_all_open_positions(pair)
+        market_price = self.exchange.get_market_price(pair)
         for open_position in open_positions:
             min_price_step = self.exchange.get_min_price_step(pair=open_position.pair)
             tp_price = self.risk_manager.calculate_trail_tp_price(market_price, open_position, min_price_step)

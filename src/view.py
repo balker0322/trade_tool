@@ -1,5 +1,8 @@
 from src.positionmodel import PositionModel
 
 
-class TkView:
-    pass
+class View:
+    
+    def account_status(self, open_position):
+        pass
+    
