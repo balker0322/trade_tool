@@ -155,5 +155,7 @@ class BinanceExchange(IExchange):
         # return list(self.pair_info.keys())
         return [
             'BTCUSDT',
-            'ETHUSDT'
+            'ETHUSDT',
+            'ADAUSDT',
+            'MANAUSDT'
         ]

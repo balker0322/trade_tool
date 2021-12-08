@@ -26,7 +26,7 @@ def close_all():
     risk_manager = RiskManager(RISK_AMOUNT, RR_RATIO)
     trader = TradeInvoker(exchange=binance_trader, risk_manager=risk_manager)
     trader.close_all_position()
-    
+
 
 if __name__=='__main__':
-    trade_test('BTCUSDT', 49970.01)
+    trade_test('MANAUSDT', 4.2)
