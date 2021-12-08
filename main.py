@@ -29,4 +29,4 @@ def close_all():
 
 
 if __name__=='__main__':
-    trade_test('MANAUSDT', 4.2)
+    trade_test('BTCUSDT', 50000.00)
