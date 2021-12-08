@@ -6,6 +6,13 @@ class Logger:
     def info(self, message:str):
         print(message)
 
+    def start(self, message:str):
+        print(message)
+
+    def end(self):
+        print(message)
+    
+
 logger = Logger()
 
 def retry(func, count=5):

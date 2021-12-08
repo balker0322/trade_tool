@@ -23,12 +23,13 @@ class TradeInvoker(Invoker):
         market_price = self.exchange.get_market_price(pair)
         min_lot_size = self.exchange.get_min_lot_size(pair=pair)
         position_size = self.risk_manager.calculate_position_size(market_price, planned_stop_loss, min_lot_size)
-        side = 'LONG' if float(market_price) > float(planned_stop_loss) else 'SHORT'
-        print("TEST:")
+        side = 'SHORT' if float(position_size) < 0.0 else 'LONG'
+        print("==========TEST==========")
         print(f"{pair}: {market_price} USDT")
-        print(f"Planned SL: {planned_stop_loss}")
+        print(f"Planned SL: {planned_stop_loss} USDT")
         print(f"Side: {side}")
-        print(f"Position Size: {position_size}")
+        print(f"Position Size: {position_size} {pair.replace('USDT','')}")
+        print("========================")
 
     def get_all_open_positions(self, pair:str=''):
         if pair:
