@@ -88,3 +88,11 @@ class RiskManager(IRiskManager):
             risk=self.risk_amount,
             rr_ratio=self.rr_ratio,
         )
+
+    def _is_winning(self, market_price, entry_price, is_long):
+        is_increasing = market_price > entry_price
+        if is_long and is_increasing:
+            return True
+        if not is_long and not is_increasing:
+            return True
+        return False
